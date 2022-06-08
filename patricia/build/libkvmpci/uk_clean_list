@@ -1,0 +1,8 @@
+/usr/src/apps/patricia/build/libkvmpci/pci_bus.common.o
+/usr/src/apps/patricia/build/libkvmpci/pci_bus.common.d
+/usr/src/apps/patricia/build/libkvmpci/pci_bus_arm64.arm.o
+/usr/src/apps/patricia/build/libkvmpci/pci_bus_arm64.arm.d
+/usr/src/apps/patricia/build/libkvmpci/pci_ecam.arm.o
+/usr/src/apps/patricia/build/libkvmpci/pci_ecam.arm.d
+/usr/src/apps/patricia/build/libkvmpci.ld.o
+/usr/src/apps/patricia/build/libkvmpci.o
