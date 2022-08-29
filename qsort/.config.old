@@ -6,7 +6,7 @@ CONFIG_UK_FULLVERSION="0.8.0~507b1e9"
 CONFIG_UK_CODENAME="Enceladus"
 CONFIG_UK_ARCH="arm64"
 CONFIG_UK_BASE="/usr/src/unikraft/unikraft"
-CONFIG_UK_APP="/usr/src/apps/helloworld"
+CONFIG_UK_APP="/usr/src/apps/qsort"
 CONFIG_UK_DEFNAME="helloworld"
 
 #
