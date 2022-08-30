@@ -32,19 +32,6 @@ e.g bmhi_init" and  "bmhi_search" instead*/
 #include "input_large.h"
 #include "../regions_header/mem_regions.h"
 
-unsigned long __apptext_start;
-unsigned long __apptext_end;
-unsigned long __approdata_start;
-unsigned long __approdata_end;
-unsigned long __appdata_start;
-unsigned long __appdata_end;
-unsigned long __appbss_start;
-unsigned long __appbss_end;
-unsigned long __appstack_start;
-unsigned long __appstack_end;
-unsigned long __appheap_start;
-unsigned long __appheap_end;
-
 static size_t table[UCHAR_MAX + 1];
 static size_t len;
 static char *findme;

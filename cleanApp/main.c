@@ -6,18 +6,6 @@
 #endif /* __Unikraft__ */
 #include "../regions_header/mem_regions.h"
 
-unsigned long __apptext_start;
-unsigned long __apptext_end;
-unsigned long __approdata_start;
-unsigned long __approdata_end;
-unsigned long __appdata_start;
-unsigned long __appdata_end;
-unsigned long __appbss_start;
-unsigned long __appbss_end;
-unsigned long __appstack_start;
-unsigned long __appstack_end;
-unsigned long __appheap_start;
-unsigned long __appheap_end;
 
 int main(int argc, char *argv[])
 {
