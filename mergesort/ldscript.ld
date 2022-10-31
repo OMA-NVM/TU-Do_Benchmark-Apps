@@ -65,7 +65,7 @@ SECTIONS {
 	{
         . = ALIGN(0x8);
         __appheap_start = .;
-		. += 0x8000;
+		. += 0x80000;
         . = ALIGN(0x8);
         __appheap_end = .;
 	}

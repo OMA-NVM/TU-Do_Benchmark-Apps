@@ -56,7 +56,7 @@ SECTIONS {
 	{
         . = ALIGN(0x8);
         __appstack_start = .;
-		. += 0x10000;
+		. += 0x80000;
         . = ALIGN(0x8);
         __appstack_end = .;
 	}

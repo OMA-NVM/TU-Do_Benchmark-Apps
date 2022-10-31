@@ -30,10 +30,6 @@ int main(int argc, char *argv[])
 #endif
 
 	printf("Hello world!\n");
-	printf("Bitte lass es klappen!\n");
-	printf("Läuft arm64 ?\n");
-	printf("Klappt!\n");	
-
 #if CONFIG_APPHELLOWORLD_PRINTARGS
 	printf("Arguments: ");
 	for (i=0; i<argc; ++i)

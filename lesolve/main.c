@@ -5,9 +5,11 @@
 #include <uk/config.h>
 #endif /* __Unikraft__ */
 #include "solve.h"
-#include "data.h"
 #include "../regions_header/mem_regions.h"
-
+#define DATA 0
+#define BSS 0
+#define HEAP 0
+#define STACK 0
 
 int main(int argc, char *argv[])
 {   
@@ -24,34 +26,17 @@ int main(int argc, char *argv[])
 	printf("__appstack_start: 0x%lx\n", &__appstack_start);
 	printf("__appstack_end: 0x%lx\n", &__appstack_end);
 
+    #if DATA && !BSS && !HEAP && !STACK
 
+    #elif !DATA && BSS && !HEAP && !STACK
+
+    #elif !DATA && !BSS && HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && STACK
+
+    #else
 	printf("Hello Lesolve!\n");
-	app_init();
-    
+    app_init();
 	printf("Goodbye Lesolve!\n");
+    #endif
 }
-
-void app_init() {
-    double local_system[RANGE][RANGE];
-
-    double *system_ptr[RANGE];
-    for (uint64_t i = 0; i < RANGE; i++) {
-        system_ptr[i] = local_system[i];
-    }
-
-    // print_system(system_ptr, right, RANGE);
-    for (unsigned long i = 0; i < 150; i++) {
-        for (unsigned long x = 0; x < RANGE; x++) {
-            for (unsigned long y = 0; y < RANGE; y++) {
-                local_system[x][y] = system[x][y];
-            }
-        }
-
-        if(i%10)
-            printf("%d Percent done \n", (i*100)/150);
-        solve_system(system_ptr, right, RANGE);
-    }
-
-    // print_system(system_ptr, right, RANGE);
-}
-

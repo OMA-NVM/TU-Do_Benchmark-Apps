@@ -1,8 +1,8 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Unikraft/0.9.0~e584d02 Configuration
+# Unikraft/0.9.0~4355bc2 Configuration
 #
-CONFIG_UK_FULLVERSION="0.9.0~e584d02"
+CONFIG_UK_FULLVERSION="0.9.0~4355bc2"
 CONFIG_UK_CODENAME="Hyperion"
 CONFIG_UK_ARCH="arm64"
 CONFIG_UK_BASE="/root/.unikraft/unikraft"
@@ -62,9 +62,7 @@ CONFIG_GEM5_DEBUG_SERIAL_CONSOLE=y
 CONFIG_LIBGICV3=y
 CONFIG_LIBOFW=y
 # CONFIG_PLAT_KVM is not set
-CONFIG_PLAT_LINUXU=y
-CONFIG_LINUXU_DEFAULT_HEAPMB=4
-CONFIG_LINUXU_MAX_IRQ_HANDLER_ENTRIES=8
+# CONFIG_PLAT_LINUXU is not set
 
 #
 # Platform Interface Options

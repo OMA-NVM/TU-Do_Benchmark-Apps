@@ -1,6 +1,7 @@
 /* A Naive recursive implementation
 of 0-1 Knapsack problem */
 #include <stdio.h>
+#include "input.h"
 
 unsigned int RecursionCounter = 0;
 // A utility function that returns
@@ -9,10 +10,12 @@ int max(int a, int b) { return (a > b) ? a : b; }
  
 // Returns the maximum value that
 // can be put in a knapsack of capacity W
+
+int i, w;
+int K[200 + 1][200 + 1];
+
 int knapSack(int W, int wt[], int val[], int n) {
   printf("Recursion#: %d\n", RecursionCounter++);
-    int i, w;
-    int K[n + 1][W + 1];
  
     // Build table K[][] in bottom up manner
     for (i = 0; i <= n; i++) {
@@ -33,3 +36,24 @@ int knapSack(int W, int wt[], int val[], int n) {
     return K[n][W];
 }
 // END knapsack
+
+// Driver program to test above function
+int size=200;
+int values[];
+int weight[];
+
+
+int app_init() {
+  //https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html
+  for (int i = 0; i < size; i++)
+  {
+    values[i] = val[i];
+    weight[i] = wt[i];
+  }
+  
+  int W = 200;
+  int n = sizeof(val) / sizeof(values[0]);
+  printf("Calculated: %d\n", knapSack(W, weight, values, n));
+  printf("Correct: %d\n", 13549094);
+  return 0;
+}

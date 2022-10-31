@@ -1,5 +1,6 @@
 typedef unsigned char uint8_t;
 unsigned int number;
+unsigned int sort[];
 
 void app_init() {
     unsigned int sort_size = 8000;
@@ -62,4 +63,28 @@ void quick_sort(unsigned char *begin, unsigned char *end) {
     quick_sort(li + 1, end);
 }
 
-//			QUICKSORT END
+//			QUICKSORT END 
+
+
+
+void app_init_bss(){
+    unsigned int sort_size = 8000;
+    for (int i = 0; i < sort_size; i++)
+    {
+        sort[i] = random_number[i];
+    }
+    
+    printf("Starting to sort %d numbers\n", sort_size);
+    quick_sort(sort, sort + sort_size);
+
+    unsigned char before = 0;
+    unsigned char sane = 1;
+    for (unsigned long i = 0; i < sort_size; i++) {
+      printf("Array[%d] = %d\n", i, sort[i]);
+      if (before > sort[i] ) {
+        sane = 0;
+      }
+    }
+    if (sane == 0)
+      printf("Program is no longer syntactical correct!\n");
+}

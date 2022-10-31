@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 /* Import user configuration: */
 #ifdef __Unikraft__
 #include <uk/config.h>
@@ -9,6 +10,10 @@
 #include "includes.h"
 #include "qsort.h"
 #include "../regions_header/mem_regions.h"
+#define DATA 0
+#define BSS 1
+#define HEAP 0
+#define STACK 0
 
 int main(int argc, char *argv[])
 {
@@ -25,10 +30,21 @@ int main(int argc, char *argv[])
 	printf("__appstack_start: 0x%lx\n", &__appstack_start);
 	printf("__appstack_end: 0x%lx\n", &__appstack_end);
 
+
+	#if DATA && !BSS && !HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && !STACK
+		printf("Hello qsort_bss!\n");
+		app_init_bss();
+		printf("qsort_bss ende!\n");
+    #elif !DATA && !BSS && HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && STACK
+
+    #else
 	printf("Hello qsort!\n");
-
 	app_init();
-	printf("Qsort ende!\n");
+	printf("qsort ende!\n");
 	printf("Aufgeräumt!\n");
-
+	#endif
 }

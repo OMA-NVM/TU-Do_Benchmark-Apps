@@ -31,6 +31,11 @@ e.g bmhi_init" and  "bmhi_search" instead*/
 //#include "input_small.h"
 #include "input_large.h"
 #include "../regions_header/mem_regions.h"
+#define DATA 0
+#define BSS 0
+#define HEAP 0
+#define STACK 0
+
 
 static size_t table[UCHAR_MAX + 1];
 static size_t len;
@@ -99,9 +104,19 @@ int main(int argc, char *argv[])
 	printf("__appstack_start: 0x%lx\n", &__appstack_start);
 	printf("__appstack_end: 0x%lx\n", &__appstack_end);
 
-	printf("Hello stringsearch!\n");
 
-	char *here;
+    #if DATA && !BSS && !HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && !STACK
+
+    #elif !DATA && !BSS && HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && STACK
+
+    #else
+      printf("Hello stringsearch!\n");
+
+      char *here;
       int i;
 
       for (i = 0; find_strings[i]; i++)
@@ -116,6 +131,8 @@ int main(int argc, char *argv[])
                   printf(" [\"%s\"]", here);
             putchar('\n');
       }
-	printf("Goodbye stringsearch!\n");
-	return 0;
+      printf("Goodbye stringsearch!\n");
+      return 0;
+      #endif
+
 }

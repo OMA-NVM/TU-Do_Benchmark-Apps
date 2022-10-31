@@ -6,7 +6,10 @@
 #endif /* __Unikraft__ */
 #include "sha.h"
 #include "../regions_header/mem_regions.h"
-
+#define DATA 0
+#define BSS 0
+#define HEAP 0
+#define STACK 0
 
 int main(int argc, char *argv[])
 {
@@ -24,10 +27,19 @@ int main(int argc, char *argv[])
 	printf("__appstack_start: 0x%lx\n", &__appstack_start);
 	printf("__appstack_end: 0x%lx\n", &__appstack_end);
     
+	#if DATA && !BSS && !HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && !STACK
+
+    #elif !DATA && !BSS && HEAP && !STACK
+
+    #elif !DATA && BSS && !HEAP && STACK
+
+    #else
 	printf("Hello sha!\n");
 	app_init();
 	printf("Goodbye sha!\n");
-
+	#endif
 }
 
 

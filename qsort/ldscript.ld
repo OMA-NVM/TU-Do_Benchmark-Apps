@@ -55,10 +55,10 @@ SECTIONS {
     .appstack :
 	{
         . = ALIGN(0x8);
-        __appstack_start = .;
-		. += 0x10000;
+		__appstack_start = .;
+		. += 0x80000;
         . = ALIGN(0x8);
-        __appstack_end = .;
+		__appstack_end = .;
 	}
 
     .appheap :
