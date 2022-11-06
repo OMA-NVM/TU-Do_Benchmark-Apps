@@ -1,5 +1,7 @@
 #include "mergesort.h"
 
+//Source code: https://gist.github.com/c2huc2hu/30ae823e122c113cf46b
+
 /** Make a copy of an array from start to end - 1.
 Equivalent to Python's arr[start:end] */
 int* slice(int *arr, int start, int end)
