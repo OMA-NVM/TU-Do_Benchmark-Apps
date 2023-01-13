@@ -5,14 +5,14 @@
 #include <uk/config.h>
 #endif /* __Unikraft__ */
 #include "solve.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 0
 #define STACK 0
 
 int main(int argc, char *argv[])
-{   
+{
     printf("__apptext_start: 0x%lx\n", &__apptext_start);
 	printf("__apptext_end: 0x%lx\n", &__apptext_end);
 	printf("__approdata_start: 0x%lx\n", &__approdata_start);

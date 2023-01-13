@@ -23,14 +23,14 @@
 #include <stddef.h>
 #include <string.h>
 #include <limits.h>
-/*Rename "init" and "strsearch" in the main function with corresponding Algorithm 
+/*Rename "init" and "strsearch" in the main function with corresponding Algorithm
 e.g bmhi_init" and  "bmhi_search" instead*/
 #include "bmhasrch.h"
 //#include "bmhisrch.h"
 #include "bmhsrch.h"
 //#include "input_small.h"
 #include "input_large.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 0

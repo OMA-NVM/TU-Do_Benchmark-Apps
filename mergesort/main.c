@@ -7,7 +7,7 @@
 #endif /* __Unikraft__ */
 #include "mergesort.c"
 #include "input.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 1
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 
   printf("start allocating heap\n");
-    int* arr[1000]; 
+    int* arr[1000];
     for (int i = 0; i < 1000; i++) {
       arr[i] = (int*)malloc(sizeof(int));
     }
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     {
       printf("failed");
     }
-    
+
     printf("finished allocating heap and start getting input\n");
     for (int i = 0; i < 1000; i++) {
         arr[i] = input[i];
@@ -66,11 +66,11 @@ int main(int argc, char *argv[])
   {
     array[i] = input[i];
   }
-  
+
   mergeSort(array, LENGTH);
   printArray(array, LENGTH);
   printf("test");
   #endif
   printf("Goodbye !\n");
-	
+
 }

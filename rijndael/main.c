@@ -5,7 +5,7 @@
 #include <uk/config.h>
 #endif /* __Unikraft__ */
 #include "aesxam.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 0
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	printf("__appheap_end: 0x%lx\n", &__appheap_end);
 	printf("__appstack_start: 0x%lx\n", &__appstack_start);
 	printf("__appstack_end: 0x%lx\n", &__appstack_end);
-    
+
     #if DATA && !BSS && !HEAP && !STACK
 
     #elif !DATA && BSS && !HEAP && !STACK

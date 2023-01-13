@@ -9,7 +9,7 @@
 #include "data.h"
 #include "includes.h"
 #include "qsort.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 1
 #define HEAP 0

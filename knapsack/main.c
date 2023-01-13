@@ -5,7 +5,7 @@
 #include <uk/config.h>
 #endif /* __Unikraft__ */
 #include "knapsack.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 0

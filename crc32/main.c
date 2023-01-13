@@ -6,7 +6,7 @@
 #endif /* __Unikraft__ */
 #include "crc_32.h"
 #include "crc.h"
-#include "../regions_header/mem_regions.h"
+#include "../../libs/regions_header/mem_regions.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 0
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
 	printf("Hello crc32!\n");
 	app_init();
-	
+
 	printf("Ende crc32!\n");
 	#endif
 }
