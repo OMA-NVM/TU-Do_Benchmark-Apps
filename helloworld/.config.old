@@ -6,8 +6,8 @@ CONFIG_UK_FULLVERSION="0.9.0~ae4c9b3"
 CONFIG_UK_CODENAME="Hyperion"
 CONFIG_UK_ARCH="arm64"
 CONFIG_UK_BASE="/workspaces/NVMBench/Unikraft_Setup/unikraft"
-CONFIG_UK_APP="/workspaces/NVMBench/Unikraft_Setup/apps/lesolve"
-CONFIG_UK_DEFNAME="lesolve"
+CONFIG_UK_APP="/workspaces/NVMBench/Unikraft_Setup/apps/helloworld"
+CONFIG_UK_DEFNAME="helloworld"
 
 #
 # Architecture Selection
@@ -81,7 +81,7 @@ CONFIG_UKPLAT_LCPU_MAXCOUNT=1
 # end of Platform Interface Options
 
 CONFIG_HZ=100
-CONFIG_FPSIMD=y
+# CONFIG_FPSIMD is not set
 # end of Platform Configuration
 
 #
@@ -124,7 +124,7 @@ CONFIG_LIBUKBOOT_MAXNBARGS=60
 CONFIG_LIBUKBOOT_INITBBUDDY=y
 # CONFIG_LIBUKBOOT_INITREGION is not set
 # CONFIG_LIBUKBOOT_NOALLOC is not set
-# CONFIG_LIBUKBUS is not set
+CONFIG_LIBUKBUS=y
 CONFIG_LIBUKDEBUG=y
 CONFIG_LIBUKDEBUG_PRINTK=y
 # CONFIG_LIBUKDEBUG_PRINTK_INFO is not set
@@ -150,7 +150,7 @@ CONFIG_LIBUKDEBUG_ENABLE_ASSERT=y
 # CONFIG_LIBUKNETDEV is not set
 # CONFIG_LIBUKRING is not set
 # CONFIG_LIBUKSCHED is not set
-# CONFIG_LIBUKSGLIST is not set
+CONFIG_LIBUKSGLIST=y
 # CONFIG_LIBUKSIGNAL is not set
 # CONFIG_LIBUKSP is not set
 # CONFIG_LIBUKSTORE is not set
@@ -187,4 +187,9 @@ CONFIG_LLVM_TARGET_ARCH=""
 #
 # Application Options
 #
-CONFIG_UK_NAME="lesolve"
+CONFIG_APPHELLOWORLD_DEPENDENCIES=y
+CONFIG_APPHELLOWORLD_PRINTARGS=y
+CONFIG_APPHELLOWORLD_SPINNER=y
+# end of Application Options
+
+CONFIG_UK_NAME="helloworld"

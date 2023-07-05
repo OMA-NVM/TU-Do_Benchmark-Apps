@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include "../work_around.h"
+
 /* Import user configuration: */
 #ifdef __Unikraft__
 #include <uk/config.h>

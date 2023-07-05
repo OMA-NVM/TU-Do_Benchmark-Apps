@@ -6,8 +6,8 @@ CONFIG_UK_FULLVERSION="0.9.0~ae4c9b3"
 CONFIG_UK_CODENAME="Hyperion"
 CONFIG_UK_ARCH="arm64"
 CONFIG_UK_BASE="/workspaces/NVMBench/Unikraft_Setup/unikraft"
-CONFIG_UK_APP="/workspaces/NVMBench/Unikraft_Setup/apps/lesolve"
-CONFIG_UK_DEFNAME="lesolve"
+CONFIG_UK_APP="/workspaces/NVMBench/Unikraft_Setup/apps/sha"
+CONFIG_UK_DEFNAME="sha"
 
 #
 # Architecture Selection
@@ -81,7 +81,7 @@ CONFIG_UKPLAT_LCPU_MAXCOUNT=1
 # end of Platform Interface Options
 
 CONFIG_HZ=100
-CONFIG_FPSIMD=y
+# CONFIG_FPSIMD is not set
 # end of Platform Configuration
 
 #
@@ -187,4 +187,4 @@ CONFIG_LLVM_TARGET_ARCH=""
 #
 # Application Options
 #
-CONFIG_UK_NAME="lesolve"
+CONFIG_UK_NAME="sha"

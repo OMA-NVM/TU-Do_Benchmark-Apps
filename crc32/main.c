@@ -7,6 +7,7 @@
 #include "crc_32.h"
 #include "crc.h"
 #include "../../libs/regions_header/mem_regions.h"
+#include "../work_around.h"
 #define DATA 0
 #define BSS 0
 #define HEAP 0
