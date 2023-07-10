@@ -52,6 +52,7 @@ int main(int argc, char *argv[]) {
 	);
 }
 
+// Not possible to build into unikraft-rollback version due missing fp support.
 int mainApp(int argc, char *argv[])
 {
     printf("__apptext_start: 0x%lx\n", &__apptext_start);
