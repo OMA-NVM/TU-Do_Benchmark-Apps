@@ -130,6 +130,7 @@ int main(int argc, char *argv[]) {
 	);
 }
 
+// Not possible to build into unikraft-rollback version due unknown required configuration.
 int mainApp(int argc, char *argv[])
 {
       printf("__apptext_start: 0x%lx\n", &__apptext_start);
