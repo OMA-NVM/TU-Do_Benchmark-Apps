@@ -55,18 +55,12 @@ HeapBlock* FindNextFit(size_t size) {
     HeapBlock* current = heap;
 
     while(current != NULL) {
-        printf("-----\n");
-        printf("Current free: %u\n", current->free);
-        printf("Current size: %u\n", current->size);
-
         if(current->free && current->size >= size) {
             return current;
         }
 
         current = current->next;
     }
-
-    printf("Found no fit!\n");
 
     return NULL;
 }
