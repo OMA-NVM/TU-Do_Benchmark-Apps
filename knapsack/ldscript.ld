@@ -61,11 +61,12 @@ SECTIONS {
         __appstack_end = .;
 	}
 
-    .appheap :
+	.appheap :
 	{
         . = ALIGN(0x8);
         __appheap_start = .;
-		. += 0x8000;
+		*(.appheap)
+		*(.appheap.*)
         . = ALIGN(0x8);
         __appheap_end = .;
 	}
