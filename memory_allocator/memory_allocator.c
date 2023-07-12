@@ -113,7 +113,6 @@ void* app_malloc(size_t size) {
     }
     
     HeapBlock* fitting = FindNextFit(size);
-    printf("Next fitting: %x", fitting);
 
     if(fitting == NULL) {
         return NULL;
