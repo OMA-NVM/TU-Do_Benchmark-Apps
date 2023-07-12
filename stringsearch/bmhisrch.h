@@ -19,6 +19,9 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdio.h>
+
+#include "../memory_allocator/memory_allocator.h"
+
 typedef unsigned char uchar;
 
 void bmhi_init(const char *);
@@ -47,7 +50,7 @@ void bmhi_init(const char *pattern)
 
       /* Make uppercase copy of pattern */
 
-      pat = realloc ((void*)pat, patlen);
+      pat = app_realloc ((void*)pat, patlen);
       if (!pat)
             exit(1);
       else  atexit(bhmi_cleanup);
@@ -103,5 +106,5 @@ char *bmhi_search(const char *string, const int stringlen)
 
 void bhmi_cleanup(void)
 {
-      free(pat);
+      app_free(pat);
 }

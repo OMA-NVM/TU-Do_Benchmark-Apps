@@ -8,6 +8,7 @@
 #include "mergesort.c"
 #include "input.h"
 #include "../../libs/regions_header/mem_regions.h"
+#include "../memory_allocator/memory_allocator.h"
 #include "../work_around.h"
 #define DATA 0
 #define BSS 0
@@ -79,7 +80,7 @@ int mainApp(int argc, char *argv[])
   printf("start allocating heap\n");
     int* arr[1000];
     for (int i = 0; i < 1000; i++) {
-      arr[i] = (int*)malloc(sizeof(int));
+      arr[i] = (int*)app_malloc(sizeof(int));
     }
     if (arr==NULL)
     {
@@ -92,7 +93,7 @@ int mainApp(int argc, char *argv[])
     }
     printf("free allocated space");
     for (int i = 0; i < 1000; i++) {
-      free(arr[i]);
+      app_free(arr[i]);
     }
 
     #elif !DATA && BSS && !HEAP && STACK

@@ -9,6 +9,10 @@
 
 //Input array, malloc and dijkstra headers
 #include "input.h"
+/*
+ * TODO: What is the pupose of salloc. It just seems like a simple memory allocator which is missing
+ * free. Is this on purpose or can it be exchanged for the new app memory allocator?
+ */
 #include "salloc.h"
 #include "dijkstra.h"
 #include "../../libs/regions_header/mem_regions.h"
