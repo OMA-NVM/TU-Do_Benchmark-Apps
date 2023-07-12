@@ -30,6 +30,7 @@ void Split(HeapBlock* block, size_t size) {
     HeapBlock* left = block;
     HeapBlock* right = (void*)block + size + sizeof(HeapBlock);
 
+    right->free = left->free;
     right->size = block->size - size - sizeof(HeapBlock);
     right->next = block->next;
     right->previous = left;
@@ -55,6 +56,7 @@ HeapBlock* FindNextFit(size_t size) {
     HeapBlock* current = heap;
 
     while(current != NULL) {
+
         if(current->free && current->size >= size) {
             return current;
         }
