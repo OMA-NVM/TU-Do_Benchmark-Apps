@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../../libs/regions_header/mem_regions.h"
 
 #include "../work_around.h"
 
@@ -31,6 +32,18 @@ int main(int argc, char *argv[])
 	int i;
 #endif
 
+	printf("__apptext_start: 0x%lx\n", &__apptext_start);
+	printf("__apptext_end: 0x%lx\n", &__apptext_end);
+	printf("__approdata_start: 0x%lx\n", &__approdata_start);
+	printf("__approdata_end: 0x%lx\n", &__approdata_end);
+	printf("__appdata_start: 0x%lx\n", &__appdata_start);
+	printf("__appdata_end: 0x%lx\n", &__appdata_end);
+	printf("__appbss_start: 0x%lx\n", &__appbss_start);
+	printf("__appbss_end: 0x%lx\n", &__appbss_end);
+	printf("__appheap_start: 0x%lx\n", &__appheap_start);
+	printf("__appheap_end: 0x%lx\n", &__appheap_end);
+	printf("__appstack_start: 0x%lx\n", &__appstack_start);
+	printf("__appstack_end: 0x%lx\n", &__appstack_end);
 	printf("Hello world!\n");
 #if CONFIG_APPHELLOWORLD_PRINTARGS
 	printf("Arguments: ");
