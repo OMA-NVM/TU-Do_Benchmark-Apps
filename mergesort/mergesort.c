@@ -1,4 +1,5 @@
 #include "mergesort.h"
+#include "../memory_allocator/memory_allocator.h"
 
 //Source code: https://gist.github.com/c2huc2hu/30ae823e122c113cf46b
 
@@ -6,7 +7,7 @@
 Equivalent to Python's arr[start:end] */
 int* slice(int *arr, int start, int end)
 {
-    int *result = (int *) malloc((end - start) * sizeof(int));
+    int *result = (int *) app_malloc((end - start) * sizeof(int));
     int i;
     for (i = start; i < end; i++)
     {
@@ -42,8 +43,8 @@ void merge(int *result, int *left, int *right, int leftLen, int rightLen)
         result[i + j] = right[j];
     }
 
-    free(left);
-    free(right);
+    app_free(left);
+    app_free(right);
 }
 
 // in-place merge sort

@@ -1,6 +1,7 @@
 #define NUM_NODES 100
 #define NONE 9999
 #include "struct.h"
+#include "../memory_allocator/memory_allocator.h"
 
 // START DIJKSTRA
 void dijkstra(long chStart, long chEnd) {
@@ -166,7 +167,7 @@ void run_dijkstra_heap() {
   printf("start allocating heap\n");
   long* arr[r]; 
   for (i = 0; i < r; i++) {
-	  arr[i] = (long*)malloc(c* sizeof(long));
+	  arr[i] = (long*)app_malloc(c* sizeof(long));
   }
   if (arr==NULL)
   {
@@ -206,6 +207,6 @@ void run_dijkstra_heap() {
   
   printf("free allocated space");
   for (int i = 0; i < r; i++) {
-      free(arr[i]);
+      app_free(arr[i]);
   }
 }

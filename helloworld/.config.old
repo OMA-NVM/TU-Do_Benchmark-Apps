@@ -6,8 +6,8 @@ CONFIG_UK_FULLVERSION="0.3.1~835805c"
 CONFIG_UK_CODENAME="Iapetus"
 CONFIG_UK_ARCH="arm64"
 CONFIG_UK_BASE="/workspaces/bit-flip-simulator/unikraft_setup/unikraft"
-CONFIG_UK_APP="/workspaces/bit-flip-simulator/unikraft_setup/apps/lesolve"
-CONFIG_UK_DEFNAME="lesolve"
+CONFIG_UK_APP="/workspaces/bit-flip-simulator/unikraft_setup/apps/helloworld"
+CONFIG_UK_DEFNAME="helloworld"
 
 #
 # Architecture Selection
@@ -81,7 +81,7 @@ CONFIG_LIBUKBOOT=y
 CONFIG_LIBUKBOOT_BANNER=y
 CONFIG_LIBUKBOOT_MAXNBARGS=60
 CONFIG_LIBUKBOOT_INITALLOC=y
-# CONFIG_LIBUKBUS is not set
+CONFIG_LIBUKBUS=y
 CONFIG_LIBUKDEBUG=y
 CONFIG_LIBUKDEBUG_PRINTK=y
 # CONFIG_LIBUKDEBUG_PRINTK_INFO is not set
@@ -102,7 +102,7 @@ CONFIG_LIBUKDEBUG_ENABLE_ASSERT=y
 # CONFIG_LIBUKMPI is not set
 # CONFIG_LIBUKNETDEV is not set
 # CONFIG_LIBUKSCHED is not set
-# CONFIG_LIBUKSGLIST is not set
+CONFIG_LIBUKSGLIST=y
 # CONFIG_LIBUKSWRAND is not set
 # CONFIG_UKSYSINFO is not set
 CONFIG_LIBUKTIME=y
@@ -137,4 +137,9 @@ CONFIG_CROSS_COMPILE=""
 #
 # Application Options
 #
-CONFIG_UK_NAME="lesolve"
+CONFIG_APPHELLOWORLD_DEPENDENCIES=y
+CONFIG_APPHELLOWORLD_PRINTARGS=y
+CONFIG_APPHELLOWORLD_SPINNER=y
+# end of Application Options
+
+CONFIG_UK_NAME="helloworld"

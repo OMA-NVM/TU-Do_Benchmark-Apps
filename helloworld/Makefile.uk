@@ -1,3 +1,5 @@
 $(eval $(call addlib,apphelloworld))
 
 APPHELLOWORLD_SRCS-y += $(APPHELLOWORLD_BASE)/main.c
+APPHELLOWORLD_SRCS-y += $(APPHELLOWORLD_BASE)/../memory_allocator/memory_allocator.c
+APPHELLOWORLD_LDFLAGS-y += -T $(APPHELLOWORLD_BASE)/ldscript.ld

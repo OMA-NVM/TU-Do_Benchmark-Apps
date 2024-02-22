@@ -6,8 +6,8 @@ CONFIG_UK_FULLVERSION="0.3.1~835805c"
 CONFIG_UK_CODENAME="Iapetus"
 CONFIG_UK_ARCH="arm64"
 CONFIG_UK_BASE="/workspaces/bit-flip-simulator/unikraft_setup/unikraft"
-CONFIG_UK_APP="/workspaces/bit-flip-simulator/unikraft_setup/apps/lesolve"
-CONFIG_UK_DEFNAME="lesolve"
+CONFIG_UK_APP="/workspaces/bit-flip-simulator/unikraft_setup/apps/rijndael"
+CONFIG_UK_DEFNAME="rijndael"
 
 #
 # Architecture Selection
@@ -137,4 +137,4 @@ CONFIG_CROSS_COMPILE=""
 #
 # Application Options
 #
-CONFIG_UK_NAME="lesolve"
+CONFIG_UK_NAME="rijndael"
