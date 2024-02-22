@@ -7,7 +7,7 @@
 #endif /* __Unikraft__ */
 #include "mergesort.c"
 #include "input.h"
-#include "../../libs/regions_header/mem_regions.h"
+#include "../mem_regions.h"
 #include "../memory_allocator/memory_allocator.h"
 #include "../work_around.h"
 #define DATA 0

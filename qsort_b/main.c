@@ -6,7 +6,7 @@
 #endif /* __Unikraft__ */
 #include "data.h"
 #include "qsort_b.h"
-#include "../../libs/regions_header/mem_regions.h"
+#include "../mem_regions.h"
 #include "../work_around.h"
 #define DATA 0
 #define BSS 0
